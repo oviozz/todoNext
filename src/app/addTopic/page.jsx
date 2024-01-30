@@ -1,5 +1,7 @@
+
 import {revalidatePath} from "next/cache";
 import {redirect} from "next/navigation";
+import FormButton from "@/components/FormButton";
 
 
 const addTopicByID = async (formData) => {
@@ -23,7 +25,7 @@ const addTopicByID = async (formData) => {
 
 const Page = () => {
 
-    const updateTopic = async (formData) => {
+    const addTopic = async (formData) => {
         "use server"
 
         await addTopicByID({
@@ -36,14 +38,12 @@ const Page = () => {
     }
 
     return (
-        <form action={updateTopic} className={"flex flex-col gap-3 "}>
+        <form action={addTopic} className={"flex flex-col gap-3 "}>
             <input type={"text"} name={"title"} placeholder={"Topic Title"} className={"border px-4 py-2"} />
 
             <input type={"text"} name={"description"} placeholder={"Topic Description"} className={"border px-4 py-2"} />
 
-            <button type={"submit"} className={"bg-green-500 text-white py-2 px-4 w-fit "}>
-                Add topic
-            </button>
+            <FormButton title={"Add Topic"} />
 
         </form>
     )

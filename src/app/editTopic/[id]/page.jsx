@@ -1,6 +1,7 @@
 
 import {revalidatePath} from "next/cache";
 import {redirect} from "next/navigation";
+import FormButton from "@/components/FormButton";
 
 
 const getTopicById = async (id) => {
@@ -54,9 +55,8 @@ const Page = async ({params}) => {
 
             <input defaultValue={topic.description} name={"description"} type={"text"} placeholder={"Topic Description"} className={"border px-4 py-2"} />
 
-            <button type={"submit"} className={"bg-green-500 text-white py-2 px-4 w-fit "}>
-                Edit topic
-            </button>
+            <FormButton title={"Edit Topic"} />
+
 
         </form>
     )

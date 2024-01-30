@@ -1,10 +1,12 @@
 
+
 import connectMongoDB from "@/lib/mongodb";
 import {NextResponse} from "next/server";
 import Topic from "@/models/Topic";
 
 
-export async function PUT(request, {params}){
+
+    export async function PUT(request, {params}){
 
     try {
         const { id } = params;
