@@ -6,7 +6,7 @@ import TopicList from "@/components/TopicList";
 const getTopics = async () => {
     try{
 
-        const res = await fetch("/api/topics",{
+        const res = await fetch("https://todo-next-seven-iota.vercel.app/api/topics",{
             cache: "no-store"
         })
 
