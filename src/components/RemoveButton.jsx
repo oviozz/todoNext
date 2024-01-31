@@ -9,7 +9,7 @@ const RemoveButton = ({id}) => {
     const removeTopic = async () => {
         "use server"
 
-        const res = await fetch(`http://localhost:3000/api/topics/${id}`,{
+        const res = await fetch(`https://todo-next-seven-iota.vercel.app/api/topics/${id}`,{
             method: "DELETE",
         })
         if (!res.ok){
