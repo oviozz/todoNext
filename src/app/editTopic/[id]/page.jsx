@@ -6,7 +6,7 @@ import FormButton from "@/components/FormButton";
 
 const getTopicById = async (id) => {
 
-    const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
+    const res = await fetch(`https://todo-next-seven-iota.vercel.app/api/topics/${id}`, {
         cache: "no-store"
     })
     if (!res.ok){
@@ -17,7 +17,7 @@ const getTopicById = async (id) => {
 }
 
 const updateTopicByID = async (id, formData) => {
-    const res = await fetch(`http://localhost:3000/api/topics/${id}`,{
+    const res = await fetch(`https://todo-next-seven-iota.vercel.app/api/topics/${id}`,{
         cache: "no-cache",
         method: 'PUT',
         headers: {
