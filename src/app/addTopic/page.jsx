@@ -6,7 +6,7 @@ import FormButton from "@/components/FormButton";
 
 const addTopicByID = async (formData) => {
 
-    const res = await fetch(`http://localhost:3000/api/topics`,{
+    const res = await fetch(`https://todo-next-seven-iota.vercel.app/api/topics`,{
         method: 'POST',
         headers: {
             "Content-type": "application/json",
