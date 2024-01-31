@@ -6,7 +6,7 @@ export const runtime = "edge";
 const getTopics = async () => {
     try{
 
-        const res = await fetch("https://localhost:3000/api/topics",{
+        const res = await fetch("http://localhost:3000/api/topics",{
             cache: "no-store"
         })
 
