@@ -1,5 +1,7 @@
 
+
 import TopicList from "@/components/TopicList";
+
 
 const getTopics = async () => {
     try{
@@ -17,12 +19,12 @@ const getTopics = async () => {
 
 async function Home() {
 
-    const { topics } = await getTopics();
+    const topicData = await getTopics();
 
     return (
         <>
             {
-                topics?.map((topic) => (
+                topicData?.topics.map((topic) => (
                     <TopicList key={topic._id} topicData={topic}/>
                 ))
             }
