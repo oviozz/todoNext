@@ -1,8 +1,6 @@
 
 import TopicList from "@/components/TopicList";
 
-export const runtime = "edge";
-
 const getTopics = async () => {
     try{
 
